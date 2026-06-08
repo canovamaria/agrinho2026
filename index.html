@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - AgroTech Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">Agrinho <span>2026</span></div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+                    <li><a href="#tecnologia">Tecnologia</a></li>
+                    <li><a href="#calculadora">Calculadora Agro</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="btn-theme" aria-label="Alternar tema">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h1>O Futuro do Campo é Tech e Sustentável</h1>
+            <p>Descubra como a tecnologia e a preservação ambiental caminham juntas para transformar a agricultura.</p>
+            <a href="#sustentabilidade" class="btn-primary">Explorar Projeto</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="intro-section">
+            <h2>Sobre o Agrinho 2026</h2>
+            <p>O Agrinho 2026 convida estudantes e produtores a explorarem a revolução tecnológica no campo. Nosso objetivo é mostrar que a inovação digital é a maior aliada da conservação ambiental, criando uma produção de alimentos inteligente, eficiente e que protege o nosso planeta.</p>
+        </section>
+
+        <hr>
+
+        <section id="sustentabilidade" class="grid-section">
+            <div class="text-content">
+                <h2>Sustentabilidade no Agro</h2>
+                <p>A produção moderna exige responsabilidade. Através de práticas sustentáveis, conseguimos alinhar alta produtividade com o respeito à natureza:</p>
+                <ul>
+                    <li><strong>Preservação Ambiental:</strong> Proteção de matas ciliares e biodiversidade.</li>
+                    <li><strong>Uso Consciente da Água:</strong> Irrigação controlada por dados.</li>
+                    <li><strong>Energia Limpa:</strong> Fazendas movidas a energia solar e biomassa.</li>
+                    <li><strong>Reciclagem:</strong> Logística reversa de embalagens e manejo de resíduos orgânicos.</li>
+                </ul>
+            </div>
+            
+            <div class="carousel-container">
+                <div class="carousel-slides">
+                    <div class="slide active">
+                        <div class="slide-placeholder" style="background: linear-gradient(135deg, #2e7d32, #1b5e20);">
+                            <span>Energia Solar no Campo</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-placeholder" style="background: linear-gradient(135deg, #00796b, #004d40);">
+                            <span>Preservação de Recursos</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-placeholder" style="background: linear-gradient(135deg, #558b2f, #33691e);">
+                            <span>Manejo Sustentável</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+                <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="tecnologia" class="tech-section">
+            <div class="center-title">
+                <h2>Tecnologia e Produção no Campo</h2>
+                <p>Conheça as ferramentas que estão digitalizando a agricultura mundial.</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🛸</div>
+                    <h3>Drones e Sensores</h3>
+                    <p>Mapeiam plantações em tempo real e identificam pragas antes que elas se espalhem, reduzindo o uso de defensivos.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3>I.A. e Robótica</h3>
+                    <p>Algoritmos analisam o clima e robôs autônomos realizam plantio e colheita com precisão milimétrica.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Impacto Positivo</h3>
+                    <p>Economia para o produtor rural, alimentos mais saudáveis nas cidades e preservação total dos ecossistemas.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="calculadora" class="calc-section">
+            <h2>Calculadora de Economia Hídrica Tech</h2>
+            <p>Descubra quantos litros de água a tecnologia de gotejamento inteligente pode economizar na sua área de plantio em comparação com sistemas antigos.</p>
+            
+            <div class="calc-box">
+                <div class="input-group">
+                    <label for="area-input">Tamanho da área de plantio (em Hectares):</label>
+                    <input type="number" id="area-input" placeholder="Ex: 5" min="1">
+                </div>
+                <button id="calc-btn" class="btn-primary">Calcular Impacto</button>
+                
+                <div id="calc-result" class="calc-result hidden">
+                    <h3>Resultado da Inovação!</h3>
+                    <p>Ao usar sensores de umidade e gotejamento de precisão, você economiza aproximadamente:</p>
+                    <div class="result-number"><span id="litros-resultado">0</span> Litros/Dia</div>
+                    <p class="result-sub">Isso reduz o desperdício e garante água para o futuro!</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="conclusion-section">
+            <h2>Semear Inovação para Colher o Amanhã</h2>
+            <p>A agricultura e a tecnologia juntas não apenas produzem alimentos, elas cultivam a esperança de um planeta equilibrado. Faça sua parte compartilhando o conhecimento e apoiando práticas sustentáveis!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Projeto Agrinho - Desenvolvido para um Futuro Sustentável.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

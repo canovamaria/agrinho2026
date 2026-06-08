@@ -1,0 +1,364 @@
+/* ==========================================
+   VARIÁVEIS DE CORES (MODO CLARO POR PADRÃO)
+   ========================================== */
+:root {
+    --cor-principal: #1b5e20;       /* Verde Agro Profundo */
+    --cor-secundaria: #00e676;      /* Verde Neon Tecnológico */
+    --cor-fundo: #f5fafd;           /* Fundo Claro Tecnológico */
+    --cor-fundo-card: #ffffff;      /* Fundo dos Cards */
+    --cor-texto: #263238;           /* Texto Escuro Confortável */
+    --cor-texto-suave: #546e7a;     /* Texto Secundário */
+    --cor-linha: #cfd8dc;           /* Divisores de seção */
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+}
+
+/* Alteração de variáveis para o MODO ESCURO */
+html[data-theme="dark"] {
+    --cor-principal: #00e676;       /* Verde neon vira o destaque */
+    --cor-secundaria: #1b5e20;
+    --cor-fundo: #0a110d;           /* Fundo escuro cyberpunk */
+    --cor-fundo-card: #121e17;      /* Cards escuros */
+    --cor-texto: #eceff1;           /* Texto claro */
+    --cor-texto-suave: #b0bec5;
+    --cor-linha: #263238;
+    --shadow: 0 4px 20px rgba(0, 230, 118, 0.1);
+}
+
+/* ==========================================
+   CONFIGURAÇÕES GERAIS E RESET
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave da tela */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: var(--transition);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--cor-linha);
+    margin: 60px 0;
+}
+
+/* ==========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================== */
+header {
+    background-color: var(--cor-fundo-card);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+.logo span {
+    color: var(--cor-principal);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--cor-texto-suave);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--cor-principal);
+}
+
+/* Botão de Modo Claro/Escuro */
+.btn-theme {
+    background: none;
+    border: 2px solid var(--cor-linha);
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html[data-theme="dark"] .icon-sun { display: block; color: gold; }
+html[data-theme="dark"] .icon-moon { display: none; }
+html[data-theme="light"] .icon-sun { display: none; }
+html[data-theme="light"] .icon-moon { display: block; }
+
+/* ==========================================
+   BANNER PRINCIPAL
+   ========================================== */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.banner-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--cor-principal);
+    color: white !important;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+}
+
+/* ==========================================
+   SEÇÕES DE CONTEÚDO E CARROSSEL
+   ========================================== */
+.intro-section, .conclusion-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--cor-principal);
+}
+
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.text-content ul {
+    margin-top: 15px;
+    list-style-position: inside;
+}
+
+.text-content li {
+    margin-bottom: 10px;
+}
+
+/* Estrutura do Carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.carousel-slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.carousel-btn:hover { background: rgba(0,0,0,0.8); }
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ==========================================
+   SEÇÃO DE CARDS (TECNOLOGIA)
+   ========================================== */
+.center-title { text-align: center; margin-bottom: 40px; }
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--cor-fundo-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-top: 4px solid var(--cor-principal);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   CALCULADORA ECOLÓGICA
+   ========================================== */
+.calc-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calc-box {
+    background-color: var(--cor-fundo-card);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-top: 30px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--cor-linha);
+    border-radius: 8px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-size: 1rem;
+    outline: none;
+}
+
+.calc-result {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed var(--cor-linha);
+    animation: fadeIn 0.5s ease;
+}
+
+.hidden { display: none; }
+
+.result-number {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--cor-principal);
+    margin: 10px 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   RODAPÉ e RESPONSIVIDADE
+   ========================================== */
+footer {
+    background-color: var(--cor-fundo-card);
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    border-top: 1px solid var(--cor-linha);
+    color: var(--cor-texto-suave);
+}
+
+@media (max-width: 768px) {
+    .grid-section { grid-template-columns: 1fr; }
+    .header-container { flex-direction: column; gap: 15px; }
+    .banner-content h1 { font-size: 2rem; }
+}
